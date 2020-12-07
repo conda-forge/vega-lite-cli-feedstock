@@ -7,10 +7,10 @@ package:
 
 build:
   number: 0
-  skip: true  # [win]
 
 requirements:
   host:
+    - nodejs
     - yarn
   run:
     - nodejs
