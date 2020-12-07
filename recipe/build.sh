@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Update npm to better handle peer dependencies
+npm install -g npm@latest
+
 mkdir -p $PREFIX/share/vega-lite-cli
 pushd $PREFIX/share/vega-lite-cli
 npm install --save vega-lite@$PKG_VERSION
