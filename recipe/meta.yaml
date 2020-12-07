@@ -1,5 +1,5 @@
 {% set name = "vega-lite-cli" %}
-{% set version = "3.4.0" %}
+{% set version = "4.17.0" %}
 
 package:
   name: {{ name|lower }}
@@ -37,3 +37,4 @@ about:
 extra:
   recipe-maintainers:
     - johanneskoester
+    - xhochy
