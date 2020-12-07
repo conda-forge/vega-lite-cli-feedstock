@@ -7,6 +7,7 @@ mkdir -p $PREFIX/share/vega-lite-cli
 pushd $PREFIX/share/vega-lite-cli
 yarn global add install-peerdeps
 yarn add vega-lite@$PKG_VERSION
+yarn add vega@^5.17.0
 
 
 pushd $PREFIX/bin
