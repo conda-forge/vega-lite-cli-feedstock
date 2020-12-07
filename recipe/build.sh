@@ -1,13 +1,13 @@
 #!/bin/sh
 
-mkdir -p $PREFIX/lib/vega-lite-cli
-cd $PREFIX/lib/vega-lite-cli
-yarn add vega-lite@$PKG_VERSION
+mkdir -p $PREFIX/share/vega-lite-cli
+pushd $PREFIX/share/vega-lite-cli
+npm install --save vega-lite@$PKG_VERSION
 
-cd $PREFIX/bin
+pushd $PREFIX/bin
 for cmd in vl2pdf vl2png vl2svg vl2vg
 do
-    ln -s ../lib/vega-lite-cli/node_modules/vega-lite/bin/$cmd .
+    ln -s ../share/vega-lite-cli/node_modules/vega-lite/bin/$cmd .
 done
 
-cp $PREFIX/lib/vega-lite-cli/node_modules/vega-lite/LICENSE $SRC_DIR
+cp $PREFIX/share/vega-lite-cli/node_modules/vega-lite/LICENSE $SRC_DIR

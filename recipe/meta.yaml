@@ -10,8 +10,8 @@ build:
   skip: true  # [win]
 
 requirements:
-  build:
-    - yarn
+  host:
+    - nodejs
   run:
     - nodejs
     - vega-cli
