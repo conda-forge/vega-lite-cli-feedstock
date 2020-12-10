@@ -1,13 +1,19 @@
 #!/bin/sh
 
-mkdir -p $PREFIX/lib/vega-lite-cli
-cd $PREFIX/lib/vega-lite-cli
-yarn add vega-lite@$PKG_VERSION
+# Update npm to better handle peer dependencies
+npm install -g npm@latest
 
-cd $PREFIX/bin
+mkdir -p $PREFIX/share/vega-lite-cli
+pushd $PREFIX/share/vega-lite-cli
+yarn global add install-peerdeps
+yarn add vega-lite@$PKG_VERSION
+yarn add vega@^5.17.0
+
+
+pushd $PREFIX/bin
 for cmd in vl2pdf vl2png vl2svg vl2vg
 do
-    ln -s ../lib/vega-lite-cli/node_modules/vega-lite/bin/$cmd .
+    ln -s ../share/vega-lite-cli/node_modules/vega-lite/bin/$cmd .
 done
 
-cp $PREFIX/lib/vega-lite-cli/node_modules/vega-lite/LICENSE $SRC_DIR
+cp $PREFIX/share/vega-lite-cli/node_modules/vega-lite/LICENSE $SRC_DIR
