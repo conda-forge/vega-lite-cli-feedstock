@@ -10,10 +10,12 @@ build:
 
 requirements:
   host:
-    - nodejs
+    - nodejs 14.*  # [win]
+    - nodejs       # [not win]
     - yarn
   run:
-    - nodejs
+    - nodejs 14.*  # [win]
+    - nodejs       # [not win]
     - vega-cli
 
 test:
