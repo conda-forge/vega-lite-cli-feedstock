@@ -6,14 +6,16 @@ package:
   version: {{ version }}
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - nodejs
+    - nodejs 14.*  # [win]
+    - nodejs       # [not win]
     - yarn
   run:
-    - nodejs
+    - nodejs 14.*  # [win]
+    - nodejs       # [not win]
     - vega-cli
 
 test:
