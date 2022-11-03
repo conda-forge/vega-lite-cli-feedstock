@@ -7,15 +7,14 @@ package:
 
 build:
   number: 0
+  skip: true  # [nodejs == "14"]
 
 requirements:
   host:
-    - nodejs 14.*  # [win]
-    - nodejs       # [not win]
+    - nodejs
     - yarn
   run:
-    - nodejs 14.*  # [win]
-    - nodejs       # [not win]
+    - nodejs
     - vega-cli
 
 test:
