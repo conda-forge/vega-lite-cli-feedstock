@@ -7,7 +7,7 @@ package:
 
 build:
   number: 0
-  skip: true  # [nodejs == "14"]
+  skip: true  # [nodejs == 14]
 
 requirements:
   host:
