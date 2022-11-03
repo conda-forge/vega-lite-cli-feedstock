@@ -20,7 +20,7 @@ requirements:
 
 test:
   commands:
-    - curl -L https://github.com/vega/vega-lite/raw/master/examples/specs/bar.vl.json > test.json
+    - curl -L https://github.com/vega/vega-lite/raw/v{{ version }}/examples/specs/bar.vl.json > test.json
     - vl2svg test.json > test.svg
 
 about:
