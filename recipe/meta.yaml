@@ -1,5 +1,5 @@
 {% set name = "vega-lite-cli" %}
-{% set version = "4.17.0" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name|lower }}
