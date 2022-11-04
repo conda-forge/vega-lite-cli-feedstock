@@ -6,7 +6,7 @@ md node_modules
 cmd /c "npm install vega-lite@%PKG_VERSION%"
 if errorlevel 1 exit 1
 
-cmd /c "npm install --save vega@5.17.0"
+cmd /c "npm install --save vega@5.22.0"
 if errorlevel 1 exit 1
 
 pushd %LIBRARY_PREFIX%\bin

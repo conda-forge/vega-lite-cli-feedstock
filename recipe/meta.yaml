@@ -1,26 +1,25 @@
 {% set name = "vega-lite-cli" %}
-{% set version = "4.17.0" %}
+{% set version = "5.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 build:
-  number: 4
+  number: 0
+  skip: true  # [nodejs == 14]
 
 requirements:
   host:
-    - nodejs 14.*  # [win]
-    - nodejs       # [not win]
+    - nodejs
     - yarn
   run:
-    - nodejs 14.*  # [win]
-    - nodejs       # [not win]
+    - nodejs
     - vega-cli
 
 test:
   commands:
-    - curl -L https://github.com/vega/vega-lite/raw/master/examples/specs/bar.vl.json > test.json
+    - curl -L https://github.com/vega/vega-lite/raw/v{{ version }}/examples/specs/bar.vl.json > test.json
     - vl2svg test.json > test.svg
 
 about:
