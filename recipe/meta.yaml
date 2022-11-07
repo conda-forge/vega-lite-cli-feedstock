@@ -5,8 +5,12 @@ package:
   name: {{ name|lower }}
   version: {{ version }}
 
+source:
+  url: https://github.com/vega/vega-lite/archive/refs/tags/v{{ version }}.tar.gz
+  sha256: dbab286680ac5bc0dd1b6dd14934e133fc8c5f468bfd0389396814784485ed44
+
 build:
-  number: 0
+  number: 1
   skip: true  # [nodejs == 14]
 
 requirements:
