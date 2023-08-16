@@ -16,7 +16,7 @@ build:
 requirements:
   host:
     - nodejs
-    - yarn
+    - yarn <2
   run:
     - nodejs
     - vega-cli
