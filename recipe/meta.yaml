@@ -10,10 +10,11 @@ source:
   sha256: 256baf0a281efade3bdfc7edb8658b362371e7dd8f682d9c254cd0d34493a38e
 
 build:
-  number: 1
-  skip: true  # [nodejs == 14]
+  number: 2
 
 requirements:
+  build:
+    - nodejs
   host:
     - nodejs
     - yarn <2
