@@ -1,5 +1,5 @@
 {% set name = "vega-lite-cli" %}
-{% set version = "6.1.0" %}
+{% set version = "6.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/vega/vega-lite/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 1ebec9f724677fe0f4ed352c35a7358e0408e0164e19c8cd53e38596d03b804e
+  sha256: f83f0f715ce81e76595854deaeb23378872cc9ab0cbf297eb2dfc493bd7afdbc
 
 build:
   number: 0
