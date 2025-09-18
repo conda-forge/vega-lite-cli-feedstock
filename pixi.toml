@@ -16,87 +16,60 @@ platforms = ["linux-64", "osx-64", "win-64"]
 [dependencies]
 conda-build = ">=24.1"
 conda-forge-ci-setup = "4.*"
-python = "3.12.*"
+rattler-build = "*"
 
 [tasks]
 [tasks.inspect-all]
 cmd = "inspect_artifacts --all-packages"
-description = "List contents of all packages found in conda-build build directory."
+description = "List contents of all packages found in rattler-build build directory."
 [tasks.build]
-cmd = "conda-build build recipe"
+cmd = "rattler-build build --recipe recipe"
 description = "Build vega-lite-cli-feedstock directly (without setup scripts), no particular variant specified"
-[tasks.debug]
-cmd = "conda-build debug recipe"
-description = "Debug vega-lite-cli-feedstock directly (without setup scripts), no particular variant specified"
 [tasks."build-linux_64_nodejs20"]
-cmd = "conda-build build recipe -m .ci_support/linux_64_nodejs20.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_nodejs20.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_nodejs20.yaml"
 description = "Build vega-lite-cli-feedstock with variant linux_64_nodejs20 directly (without setup scripts)"
-[tasks."debug-linux_64_nodejs20"]
-cmd = "conda-build debug recipe -m .ci_support/linux_64_nodejs20.yaml"
-description = "Debug vega-lite-cli-feedstock with variant linux_64_nodejs20 directly (without setup scripts)"
 [tasks."inspect-linux_64_nodejs20"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_nodejs20.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant linux_64_nodejs20"
 [tasks."build-linux_64_nodejs22"]
-cmd = "conda-build build recipe -m .ci_support/linux_64_nodejs22.yaml --suppress-variables --clobber-file .ci_support/clobber_linux_64_nodejs22.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_nodejs22.yaml"
 description = "Build vega-lite-cli-feedstock with variant linux_64_nodejs22 directly (without setup scripts)"
-[tasks."debug-linux_64_nodejs22"]
-cmd = "conda-build debug recipe -m .ci_support/linux_64_nodejs22.yaml"
-description = "Debug vega-lite-cli-feedstock with variant linux_64_nodejs22 directly (without setup scripts)"
 [tasks."inspect-linux_64_nodejs22"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_nodejs22.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant linux_64_nodejs22"
 [tasks."build-osx_64_nodejs20"]
-cmd = "conda-build build recipe -m .ci_support/osx_64_nodejs20.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_nodejs20.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_nodejs20.yaml"
 description = "Build vega-lite-cli-feedstock with variant osx_64_nodejs20 directly (without setup scripts)"
-[tasks."debug-osx_64_nodejs20"]
-cmd = "conda-build debug recipe -m .ci_support/osx_64_nodejs20.yaml"
-description = "Debug vega-lite-cli-feedstock with variant osx_64_nodejs20 directly (without setup scripts)"
 [tasks."inspect-osx_64_nodejs20"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_nodejs20.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant osx_64_nodejs20"
 [tasks."build-osx_64_nodejs22"]
-cmd = "conda-build build recipe -m .ci_support/osx_64_nodejs22.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_64_nodejs22.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_nodejs22.yaml"
 description = "Build vega-lite-cli-feedstock with variant osx_64_nodejs22 directly (without setup scripts)"
-[tasks."debug-osx_64_nodejs22"]
-cmd = "conda-build debug recipe -m .ci_support/osx_64_nodejs22.yaml"
-description = "Debug vega-lite-cli-feedstock with variant osx_64_nodejs22 directly (without setup scripts)"
 [tasks."inspect-osx_64_nodejs22"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_nodejs22.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant osx_64_nodejs22"
 [tasks."build-osx_arm64_nodejs20"]
-cmd = "conda-build build recipe -m .ci_support/osx_arm64_nodejs20.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_nodejs20.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_nodejs20.yaml"
 description = "Build vega-lite-cli-feedstock with variant osx_arm64_nodejs20 directly (without setup scripts)"
-[tasks."debug-osx_arm64_nodejs20"]
-cmd = "conda-build debug recipe -m .ci_support/osx_arm64_nodejs20.yaml"
-description = "Debug vega-lite-cli-feedstock with variant osx_arm64_nodejs20 directly (without setup scripts)"
 [tasks."inspect-osx_arm64_nodejs20"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_nodejs20.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant osx_arm64_nodejs20"
 [tasks."build-osx_arm64_nodejs22"]
-cmd = "conda-build build recipe -m .ci_support/osx_arm64_nodejs22.yaml --suppress-variables --clobber-file .ci_support/clobber_osx_arm64_nodejs22.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_nodejs22.yaml"
 description = "Build vega-lite-cli-feedstock with variant osx_arm64_nodejs22 directly (without setup scripts)"
-[tasks."debug-osx_arm64_nodejs22"]
-cmd = "conda-build debug recipe -m .ci_support/osx_arm64_nodejs22.yaml"
-description = "Debug vega-lite-cli-feedstock with variant osx_arm64_nodejs22 directly (without setup scripts)"
 [tasks."inspect-osx_arm64_nodejs22"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_nodejs22.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant osx_arm64_nodejs22"
 [tasks."build-win_64_nodejs20"]
-cmd = "conda-build build recipe -m .ci_support/win_64_nodejs20.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_nodejs20.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_nodejs20.yaml"
 description = "Build vega-lite-cli-feedstock with variant win_64_nodejs20 directly (without setup scripts)"
-[tasks."debug-win_64_nodejs20"]
-cmd = "conda-build debug recipe -m .ci_support/win_64_nodejs20.yaml"
-description = "Debug vega-lite-cli-feedstock with variant win_64_nodejs20 directly (without setup scripts)"
 [tasks."inspect-win_64_nodejs20"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_nodejs20.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant win_64_nodejs20"
 [tasks."build-win_64_nodejs22"]
-cmd = "conda-build build recipe -m .ci_support/win_64_nodejs22.yaml --suppress-variables --clobber-file .ci_support/clobber_win_64_nodejs22.yaml"
+cmd = "rattler-build build --recipe recipe -m .ci_support/win_64_nodejs22.yaml"
 description = "Build vega-lite-cli-feedstock with variant win_64_nodejs22 directly (without setup scripts)"
-[tasks."debug-win_64_nodejs22"]
-cmd = "conda-build debug recipe -m .ci_support/win_64_nodejs22.yaml"
-description = "Debug vega-lite-cli-feedstock with variant win_64_nodejs22 directly (without setup scripts)"
 [tasks."inspect-win_64_nodejs22"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/win_64_nodejs22.yaml"
 description = "List contents of vega-lite-cli-feedstock packages built for variant win_64_nodejs22"
