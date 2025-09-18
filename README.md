@@ -3,7 +3,7 @@ About vega-lite-cli-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vega-lite-cli-feedstock/blob/main/LICENSE.txt)
 
-Home: https://vega.github.io
+Home: https://vega.github.io/
 
 Package license: BSD-3-Clause
 
@@ -16,7 +16,6 @@ Documentation: https://vega.github.io/vega-lite/usage/compile.html#cli
 The vega-lite-cli package includes four node.js-based command line utilities -
 vl2pdf, vl2png, vl2svg, and vl2vg - for rendering static visualization images.
 These commands render to PDF, PNG, SVG files, or plain VEGA, respectively.
-
 
 Current build status
 ====================
