@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: vega-lite-cli
-  version: "6.4.2"
+  version: "6.4.3"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/vega/vega-lite/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 70ae0bc14e7cdc6a608e2790793f009fd809dbe639b83903ac322d162b1bfcd8
+  sha256: b7e839a8c59043889cf183e362803397e6610d7fac332a2d051c79e7e06abde4
 
 build:
   number: 0
